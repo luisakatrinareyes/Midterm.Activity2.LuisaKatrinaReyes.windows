@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Midterm.Activity2.LuisaKatrinaReyes.windows
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -25,5 +22,18 @@ namespace Midterm.Activity2.LuisaKatrinaReyes.windows
             InitializeComponent();
         }
 
+        public void BtnButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            int From = int.Parse(TextBox_From.Text);
+            int To = int.Parse(TextBox_To.Text);
+
+            int sum = 0;
+            for (int x = From ; x <= To; x++)
+            {
+                sum += x;
+            }
+            lblResult.Content = sum.ToString();
+        }
     }
 }
